@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#0f172a, #1e293b);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            position: fixed;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.6);
+
+
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 1s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .typing {
+            color: #38bdf8;
+            font-size: 24px;
+            height: 30px;
+            margin-bottom: 20px;
+
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(30, end) infinite alternate,
+                blink 0.6s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 22ch;
+            }
+        }
+
+        @keyframes blink {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: #38bdf8;
+            }
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: #38bdf8;
+            border: none;
+            border-radius: 25px;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #063245;
+        }
+
+        section {
+            padding: 100px 50px;
+            text-align: center;
+        }
+
+        section h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ccc;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            color: beige;
+            border-radius: 12px;
+            text-align: center;
+            transform: scale(0.9);
+
+
+        }
+
+        .project-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .project {
+            width: 250px;
+            height: 300px;
+            background: #ffffff0f;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #ffffff20;
+            text-decoration: none;
+        }
+
+        .project:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .project img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .project h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .project p {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        .contact-form {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        input,
+        textarea,
+        .contact-button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input,
+        textarea {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+
+        .contact-button {
+            background: linear-gradient(90deg, #6c8cff, #00e0ff);
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>MyPortfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Hi, I'm Valmiki</h2>
+        <div class="typing">Creative Web Developer</div>
+        <button class="btn" onclick="scrollToSection('about')">Explore More</button>
+    </div>
+
+    <section id="about">
+        <h3>About Me</h3>
+        <p>I’m a passionate web developer who loves creating modern, interactive, and visually stunning websites. My
+            goal is to make the web a more beautiful place.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Animations</div>
+            <div class="skill">Responsive Design</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h3>My Projects</h3>
+        <p>From simple portfolio websites to complex web applications, I have worked on diverse projects that blend
+            creativity with functionality.</p>
+        <div class="project-container">
+            <a href="https://valmiki-devloper.github.io/my-portfolio/" target="_blank" class="project">
+                <img src="portfolio.png" alt="Project 1">
+                <div style="padding: 1rem;">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio showcasing my work and skills.</p>
+                </div>
+            </a>
+            <a href="https://valmiki-devloper.github.io/coffee-shop/" target="_blank" class="project">
+                <img src="Coffee.png" alt="Project 2">
+                <div style="padding: 1rem;">
+                    <h3>Coffee Shop Landing</h3>
+                    <p>Creative landing page for a local coffee shop.</p>
+                </div>
+            </a>
+            
+            <a href="https://valmiki-devloper.github.io/bakeryshop/" target="_blank" class="project">
+                <img src="ValBakes.png" alt="Project 3">
+                <div style="padding: 1rem;">
+                    <h3>Bakery Website</h3>
+                    <p>Full website for an artisan bakery with menu and gallery.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h3>Contact Me</h3>
+        <p>Have a project in mind? Let’s collaborate and bring your vision to life.</p>
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button class="contact-button" type="submit">Send</button>
+            </form>
+        </div>
+
+    </section>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+        });
+    </script>
+
+</body>
+
+</html>
